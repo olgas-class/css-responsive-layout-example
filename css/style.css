@@ -1,0 +1,87 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+/* Layout */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    /* debug */
+    border: 1px solid fuchsia;
+    min-height: 100px;
+}
+
+/* HEADER */
+header {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: lightgray;
+}
+
+header .menu {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px
+}
+
+
+/* MAIN */
+/* Jumbotron */
+#jumbo {
+    background-color: lightblue;
+    padding: 5rem 0;
+}
+
+.jumbo-content {
+    text-align: center;
+}
+
+/* Services */
+.card {
+    border: 2px solid green;
+}
+
+/* Tablet:  >= 768px */
+@media screen and (min-width: 768px) {
+    /* Layout */
+    .container {
+        width: 80%;
+        max-width: 1000px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    /* HEADER */
+    header .menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* Jumbotron */
+    .jumbo-content {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* Services */
+    #services .col {
+        width: calc(100% / 3);
+        padding: 0 1rem;
+    }
+}
